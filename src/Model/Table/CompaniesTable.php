@@ -8,6 +8,7 @@ class CompaniesTable extends Table {
 		parent::initialize($config);
 		$this->addBehavior('Timestamp');
 		$this->belongsTo('Countries');
+		$this->hasMany('Platforms');
 	}
 
 	public function validationDefault(Validator $validator) {

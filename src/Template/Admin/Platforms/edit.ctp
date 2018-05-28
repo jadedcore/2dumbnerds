@@ -1,5 +1,6 @@
-<h1>New Platform</h1>
+<h1>Update Platform <small><?= $thePlatform->name;?></small></h1>
 <?= $this->Form->create($thePlatform);?>
+	<?= $this->Form->hidden('id');?>
 	<div class="row">
 		<div class="col-xs-12 col-md-6">
 			<div class="form-group">
@@ -32,5 +33,5 @@
 		</div>
 	</div>
 	<a href="/admin/platforms/index" class="btn btn-default"><span class="glyphicon glyphicon-ban-circle"></span>&nbsp;Cancel</a>
-	<?= $this->Form->button(__('Create Platform'), ['class' => 'btn btn-success']);?>
+	<?= $this->Form->button(__('Update Platform'), ['class' => 'btn btn-success']);?>
 <?= $this->Form->end();?>

@@ -1,6 +1,6 @@
 <div class="row">
 	<div class="col-xs-12 col-md-8">
-		<h1>Company List</h1>
+		<h1>Manage Companies</h1>
 		<a href="/admin/companies/add" class="btn btn-primary btn-large">
 			<span class="glyphicon glyphicon-plus"></span>&nbsp;Add Company
 		</a>

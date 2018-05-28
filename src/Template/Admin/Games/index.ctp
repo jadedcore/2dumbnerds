@@ -1,3 +1,11 @@
+<div class="row">
+	<div class="col-xs-12 col-md-8">
+		<h1>Manage Games</h1>
+		<a href="/admin/games/add" class="btn btn-primary btn-large">
+			<span class="glyphicon glyphicon-plus"></span>&nbsp;Add Game
+		</a>
+	</div>
+</div>
 <table class="table">
 	<thead>
 		<tr>
