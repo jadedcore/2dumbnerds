@@ -23,6 +23,10 @@ class UsersTable extends Table {
 			'targetForeignKey' => 'base_id',
 			'joinTable' => 'bases_users'
 		]);
+
+		$this->belongsToMany('Games', [
+			'through' => 'GamesCatalogs'
+		]);
 	}
 
 	public function validationDefault(Validator $validator) {

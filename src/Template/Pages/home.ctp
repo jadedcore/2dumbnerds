@@ -18,8 +18,9 @@
 					We haven't posted in a while... mostly because we have been saying everything in the podcast. So
 					check those out if you have not already.  In the meantime, we have been exploring PAX EAST
 					yesterday and today (Saturday Apr 7th).  Hooked up with quite a few indie games and some bigger
-					stuff like <a href="http://quanticdream.com/en/" target="_blank">Quantic Dreams, Detroit: Be Human</a>.  I will
-					post more information about all of the happenings right here after PAX when I have a better
+					stuff like
+					<a href="http://quanticdream.com/en/" target="_blank">Quantic Dreams, Detroit: Become Human</a>.
+					I will post more information about all of the happenings right here after PAX when I have a better
 					internet connection and some time to think.
 				</p>
 				<p>
@@ -617,15 +618,15 @@
 							<tbody>
 								<tr>
 									<th>XB1</th>
-									<td>Far Cry 5</td>
+									<td>Ori and the Blind Forest</td>
 								</tr>
 								<tr>
 									<th>PS4</th>
-									<td>Nothing</td>
+									<td>Detroit</td>
 								</tr>
 								<tr>
 									<th>Switch</th>
-									<td>L.A. Noire</td>
+									<td>None</td>
 								</tr>
 							</tbody>
 						</table>

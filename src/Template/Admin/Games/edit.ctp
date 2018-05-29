@@ -1,8 +1,9 @@
 <div class="row">
 	<div class="col-md-offset-2 col-md-8">
-		<h1>New Game</h1>
+		<h1>Update Game Info <small><?= h($theGame->name);?></small></h1>
 		<?= $this->Form->create($theGame);?>
-			<legend><?= __('Enter Game Information');?></legend>
+			<?= $this->Form->hidden('id');?>
+			<legend><?= __('Update Game Information');?></legend>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group">
@@ -91,7 +92,7 @@
 							<span class="glyphicon glyphicon-ban-circle"></span>
 							Cancel
 						</a>
-						<?= $this->Form->button(__('Create Game'), ['class' => 'btn btn-success']);?>
+						<?= $this->Form->button(__('Update Game'), ['class' => 'btn btn-success']);?>
 					</div>
 				</div>
 			</div>

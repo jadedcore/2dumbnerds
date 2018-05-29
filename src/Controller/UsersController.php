@@ -115,6 +115,12 @@ class UsersController extends AppController {
 		$this->set(compact('theUser', 'timeZones'));
 	}
 
+	public function myLibrary() {
+		$contain = ['Games'];
+		$theUser = $this->Users->get($this->authUser['id'], compact('contain'));
+		$this->set(compact('theUser'));
+	}
+
 /**
  * Deactivate a user account. This will not delete the users data and will just make the account inactive.
  * I don't know how I want to handle this yet...

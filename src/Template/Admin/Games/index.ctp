@@ -26,7 +26,9 @@
 					<?php endif;?>
 				</td>
 				<td>
-					<?= $game['name'];?>
+					<a href="/admin/games/edit/<?= $game['id'];?>">
+						<?= $game['name'];?>
+					</a>
 				</td>
 				<td>
 					<?= $game['publisher']['name'];?>
