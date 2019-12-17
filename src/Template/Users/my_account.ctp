@@ -119,7 +119,7 @@
 			<div class="col-md-12">
 				<h4>Additional Actions</h4>
 				<?php if ($theUser->role->priority < 100):?>
-					<div class="message success"><a href="/users/change-avatar">Update Avater</a></div>
+					<div class="message success"><a href="/users/change-avatar">Update Avatar</a></div>
 				<?php endif;?>
 				<?php if ($theUser->role->priority < 50):?>
 					<?php if (empty($theUser->owned_base)):?>

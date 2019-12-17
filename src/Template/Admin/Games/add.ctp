@@ -18,9 +18,9 @@
 				<div class="col-md-12">
 					<div class="form-group">
 						<?= $this->Form->control('Platforms', [
-							'multiple' => true,
 							'class' => 'form-control',
-							'label' => 'Available Platforms',
+							'label' => false,
+							'empty' => '-- Choose a Platform --'
 						]);?>
 					</div>
 				</div>

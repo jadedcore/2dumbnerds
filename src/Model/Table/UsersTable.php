@@ -24,9 +24,7 @@ class UsersTable extends Table {
 			'joinTable' => 'bases_users'
 		]);
 
-		$this->belongsToMany('Games', [
-			'through' => 'GamesCatalogs'
-		]);
+		$this->hasMany('Inventories');
 	}
 
 	public function validationDefault(Validator $validator) {

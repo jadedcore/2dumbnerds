@@ -9,7 +9,7 @@
 	function upload(file){
 		var uploadForm = new FormData();
 		uploadForm.append('file', file);
-		uploadForm.append('_csrfToken', '<?= $this->request->params['_csrfToken'];?>');
+		uploadForm.append('_csrfToken', '<?= $this->request->getParam('_csrfToken');?>');
 
 		$.ajax({
 			url: '/admin/podcasts/upload/',
@@ -33,14 +33,16 @@
 				request.setRequestHeader('X-CSRF-Token', '<?= $this->request->getParam('_csrfToken');?>');
 			},
 			success: function(data) {
+				console.debug(data);
 				$('#uploadError').hide();
 				$('#formDetails').show();
 				$('#fileName').val(data.new_file);
 				$('#fileLength').val(data.file.size);
 				$('#fileType').val(data.file.type);
-				console.debug(data);
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrown) {
+				console.debug(textStatus);
+				console.debug(errorThrown);
 				$('#uploadError').show();
 			}
 		});

@@ -37,15 +37,15 @@ class PodcastsController extends AppController {
 
 		if($this->__checkFile($returnData['file'])) {
 			$fileName = $this->__moveFile($returnData['file']);
+			Log::info($fileName);
 			$returnData['new_file'] = $fileName;
-			$this->response->type('json');
-			$this->response->body(json_encode($returnData));
-			return $this->response;
+			return $this->response->withType('application/json')->withStringBody(json_encode($returnData));
 		}
 		return $this->response->withStatus(500);
 	}
 
 	private function __checkFile($uploadData = []) {
+		Log::info(print_r($uploadData, true));
 		if (!isset($uploadData['error']) || $uploadData['error'] == true) {
 			Log::info('File upload error.');
 			return false;
@@ -65,6 +65,7 @@ class PodcastsController extends AppController {
 		// Look at https://secure.php.net/manual/en/function.id3-get-tag.php
 		// Using mime_content_type() may return application/octet-stream on some mp3 files
 		$allowed = [
+			'mp4' => 'audio/x-m4a',
 			'mpeg' => 'audio/mpeg',
 			'jpg' => 'image/jpeg' // For quick testing... Disable later.
 		];

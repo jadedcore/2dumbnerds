@@ -2,10 +2,12 @@
 namespace App\Model\Table;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
+use Cake\Utility\Text;
 
-class GamesCatalogsTable extends Table {
+class ActivityTypesTable extends Table {
 	public function initialize(array $config) {
-		$this->belongsTo('Games');
-		$this->belongsTo('Users');
+		parent::initialize($config);
+
+		$this->hasMany('Activities');
 	}
 }

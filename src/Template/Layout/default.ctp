@@ -18,29 +18,14 @@ $cakeDescription = '2DumbNerds';
 <!DOCTYPE html>
 <html>
 <head>
-	<?= $this->Html->charset() ?>
+	<?= $this->Html->charset();?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>
 		<?= $cakeDescription ?>:
-		<?= $this->fetch('title') ?>
+		<?= $this->fetch('title');?>
 	</title>
-	<?= $this->Html->meta('icon') ?>
-	<?= $this->fetch('meta') ?>
-
-	<!-- Net Neutrality Shit (Switch the < to > and change date to activate again.) -->
-	<?php if (new DateTime() < new DateTime("2017-12-12")): ?>
-		<style>
-			.redout {
-				width: 100%;
-				height: 500px;
-			}
-		</style>
-		<iframe class="redout" src="https://2dumbnerds.com/pages/redout"></iframe>
-	<?php endif; ?>
-	<!-- End Net Neutrality Shit -->
-
-	<?php // $this->Html->css('base.css') ?>
-	<?php // $this->Html->css('cake.css') ?>
+	<?= $this->Html->meta('icon');?>
+	<?= $this->fetch('meta');?>
 
 	<!-- Latest compiled and minified CSS -->
 	<?=
@@ -50,18 +35,10 @@ $cakeDescription = '2DumbNerds';
 		]);
 	?>
 
-	<!-- Optional theme -->
-	<!--
-	<?=
-		$this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', [
-			'integrity' => 'sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp',
-			'crossorigin' => 'anonymous'
-		]);
-	?>
-	-->
+	<!-- Move page defined css here -->
+	<?= $this->fetch('css');?>
 
-	<?= $this->fetch('css') ?>
-
+	<!-- This .css takes precedence -->
 	<?= $this->Html->css('corestyle');?>
 
 
@@ -82,32 +59,37 @@ $cakeDescription = '2DumbNerds';
 	?>
 
 	<?= $this->Html->script('googleanalytics.min');?>
-	<?= $this->fetch('script') ?>
-	<script src="https://redalert.battleforthenet.com/widget.js" async></script>
+
+	<!-- Move page specific .js here -->
+	<?= $this->fetch('script');?>
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/">
-					<img src="/img/dummies.png" alt="2 Dumb Nerds" style="width:50px" />
-				</a>
 				<button type="button" class="navbar-toggle collapsed" data-target="#main-nav" data-toggle="collapse">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
+				<a class="navbar-brand" href="/">
+					<img src="/img/2dn_logo.png" alt="2 Dumb Nerds" style="width:60px" />
+				</a>
 			</div>
 			<div class="collapse navbar-collapse" id="main-nav">
-				<h3 class="navbar-text" style="margin-right:0px; display:inline;">2</h3>
-				<h4 class="navbar-text" style="margin-left:10px; display:inline;">
-					Dumb <span style="color:#d95b0d;">Nerds</span>
-				</h4>
 				<ul class="nav navbar-nav">
-					<li><a href="/podcasts">Podcasts</a></li>
-					<li><a href="/streams">Streams</a></li>
-					<li><a href="/vanilla-cake/vanilla-categories">Forums</a></li>
-					<li><a href="/pages/coming_soon">Reviews</a></li>
+					<li>
+						<a href="/podcasts">Podcasts</a>
+					</li>
+					<li>
+						<a href="/streams">Streams</a>
+					</li>
+					<li>
+						<a href="/vanilla-cake/vanilla-categories">Forums</a>
+					</li>
+					<li>
+						<a href="/pages/coming_soon">Reviews</a>
+					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php if (isset($authUser['role']['name']) && $authUser['role']['name'] === 'admin'):?>
@@ -147,6 +129,15 @@ $cakeDescription = '2DumbNerds';
 			</div>
 		</div>
 	</nav>
+	<div id="mobile-ad-banner" class="container-fluid">
+		<a href="http://wilsonspickles.com" target="_blank">
+			<div class="row">
+				<div class="col-xs-12">
+					<img src="/img/wilsons-small.png" style="height: 75px;" />
+				</div>
+			</div>
+		</a>
+	</div>
 	<div class="container clearfix">
 		<div class="row">
 			<div class="col-xs-12">
@@ -167,9 +158,34 @@ $cakeDescription = '2DumbNerds';
 				</div>
 			</div>
 		<?php endif;?>
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="pull-right">
+					<h4 style="color:#a9470a">
+						<div class="row">
+							<div class="col-xs-12">
+								Socially Inept:&nbsp;
+								<a href="https://twitter.com/2DumbNerds" target="_blank" style="text-decoration:none;">
+									<img src="/img/twitter.png" style="width:25px;" />
+								</a>
+								<a href="https://www.twitch.tv/2dumbnerds" target="_blank" style="text-decoration:none;">
+									<img src="/img/twitch.png" style="width:25px;" />
+								</a>
+								<a href="https://discord.gg/nWwxhxf" target="_blank" style="text-decoration:none;">
+									<img src="/img/discord.png" style="width:25px;" />
+								</a>
+								<a href="https://www.instagram.com/2dumbnerds/" target="_blank" style="text-decoration:none;">
+									<img src="/img/instagram.png" style="width:25px;" />
+								</a>
+							</div>
+						</div>
+					</h4>
+				</div>
+			</div>
+		</div>
 		<?= $this->fetch('content'); ?>
 	</div>
-	<footer>
+	<footer style="min-height: 50px;">
 	</footer>
 </body>
 </html>

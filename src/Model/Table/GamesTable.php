@@ -17,15 +17,9 @@ class GamesTable extends Table {
 
 		$this->belongsTo('Ratings');
 
-		$this->belongsToMany('Platforms', [
-			'foreignKey' => 'game_id',
-			'targetForeignKey' => 'platform_id',
-			'joinTable' => 'games_platforms'
-		]);
+		$this->belongsTo('Platforms');
 
-		$this->belongsToMany('Users', [
-			'through' => 'GamesCatalogs'
-		]);
+		$this->hasMany('Inventories');
 	}
 
 	public function validationDefault(Validator $validator) {

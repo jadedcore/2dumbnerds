@@ -28,7 +28,8 @@ class UsersController extends AppController {
 
 		if (!$this->tokenLogin()){
 			if ($this->request->is('post')) {
-				$this->request->data['username'] = strtolower($this->request->data['username']);
+				$data = $this->request->getData();
+				$data['username'] = strtolower($data['username']);
 				$theUser = $this->Auth->identify();
 				if ($theUser) {
 					$data = $this->request->getData();
@@ -113,12 +114,6 @@ class UsersController extends AppController {
 
 		$timeZones = $this->Users->TimeZones->find('list')->toArray();
 		$this->set(compact('theUser', 'timeZones'));
-	}
-
-	public function myLibrary() {
-		$contain = ['Games'];
-		$theUser = $this->Users->get($this->authUser['id'], compact('contain'));
-		$this->set(compact('theUser'));
 	}
 
 /**

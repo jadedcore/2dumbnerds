@@ -8,7 +8,7 @@ class SeriesTable extends Table {
 		$this->addBehavior('Timestamp');
 		$this->setEntityClass('App\Model\Entity\Series');
 		$this->hasMany('Streams')
-			->sort(['Streams.created' => 'desc']);
+			->setSort(['Streams.created' => 'desc']);
 		$this->belongsTo('Games');
 	}
 

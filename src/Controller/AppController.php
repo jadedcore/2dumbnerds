@@ -42,7 +42,7 @@ class AppController extends Controller {
 	public function initialize()
 	{
 		parent::initialize();
-		$this->loadComponent('RequestHandler');
+		$this->loadComponent('RequestHandler', ['enableBeforeRedirect' => false]);
 		$this->loadComponent('Flash');
 		$this->loadComponent('Security', ['blackHoleCallback' => 'blackHole']);
 		$this->loadComponent('Auth', [
@@ -97,7 +97,7 @@ class AppController extends Controller {
 	public function beforeRender(Event $event)
 	{
 		if (!array_key_exists('_serialize', $this->viewVars) &&
-			in_array($this->response->type(), ['application/json', 'application/xml'])
+			in_array($this->response->getType(), ['application/json', 'application/xml'])
 		) {
 			$this->set('_serialize', true);
 		}
@@ -111,8 +111,6 @@ class AppController extends Controller {
 	}
 
 	public function blackHole($type, $error) {
-		$this->response = $this->redirect('/pages/blackhole');
-		$this->response->send();
-		$this->response->stop();
+		return $this->redirect('/pages/blackhole');
 	}
 }

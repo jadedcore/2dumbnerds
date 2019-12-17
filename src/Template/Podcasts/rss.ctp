@@ -27,12 +27,12 @@
 		</itunes:category>
 		<?php foreach ($podcasts as $cast):?>
 			<item>
-				<title><?= $cast['title'] . ': ' . $cast['subtitle'];?></title>
+				<title><?= h($cast['title']) . ': ' . h($cast['subtitle']);?></title>
 				<itunes:author>2 Dumb Nerds</itunes:author>
-				<itunes:subtitle><?= $cast['subtitle'];?></itunes:subtitle>
+				<itunes:subtitle><?= h($cast['subtitle']);?></itunes:subtitle>
 				<itunes:summary>
 					<?php if (!empty($cast['summary'])):?>
-						<?= $cast['summary'];?>
+						<?= h($cast['summary']);?>
 					<?php endif;?>
 				</itunes:summary>
 				<enclosure url="http://<?= $cast['url'];?>" length="<?= $cast['length'];?>" type="<?= $cast['type'];?>" />

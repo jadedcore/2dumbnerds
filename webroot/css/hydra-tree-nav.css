@@ -1,0 +1,25 @@
+.list {
+	border-left: .1rem solid gray;
+	margin-left: 4.5rem;
+}
+
+.leafName.inactive {
+	color: red;
+}
+
+.listItem.highlight {
+	/* background-color: #CEECF5; */
+}
+
+.listItemOptions {
+	text-align: center;
+	padding-bottom: 2.5em;
+}
+
+.listOptionInfo {
+	text-align: right;
+}
+
+.listOptionControls {
+	text-align: left;
+}

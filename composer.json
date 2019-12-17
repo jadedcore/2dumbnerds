@@ -29,7 +29,9 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"App\\": "src"
+			"App\\": "src",
+			"VanillaCake\\": "./plugins/VanillaCake/src",
+			"CodexEorzea\\": "./plugins/CodexEorzea/src"
 		}
 	},
 	"autoload-dev": {
