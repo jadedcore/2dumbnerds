@@ -1,4 +1,4 @@
-<?php $this->layout = 'lg_ad_layout';?>
+<?php // $this->layout = 'lg_ad_layout';?>
 
 <?php $this->Html->script('https://embed.twitch.tv/embed/v1.js', ['block' => 'scriptFooter']);?>
 <?php $this->Html->script('twitch', ['block' => 'scriptFooter']);?>

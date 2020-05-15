@@ -467,19 +467,19 @@ class UsersController extends AppController {
 			return false;
 		}
 		$email = new Email('mailgun');
-		$result = $email->to($messageConfig['to'])
-			->subject($messageConfig['subject'])
-			->template($messageConfig['template'])
-			->viewVars(compact('messageData'))
-			->emailFormat('html');
+		$email->setTo($messageConfig['to'])
+			->setSubject($messageConfig['subject'])
+			->setViewVars(compact('messageData'))
+			->setEmailFormat('html')
+			->viewBuilder()->setTemplate($messageConfig['template']);
 
 		if (isset($messageConfig['bcc'])) {
-			$email->bcc($messageConfig['bcc']);
+			$email->setBcc($messageConfig['bcc']);
 		}
 
 		$result = $email->send();
 
-		if ($result->http_response_code != 200) {
+		if ($result['responseCode'] != 200) {
 			// Need some logging here.
 			return false;
 		}

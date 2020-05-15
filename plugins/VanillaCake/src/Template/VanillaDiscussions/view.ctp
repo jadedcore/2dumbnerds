@@ -15,7 +15,7 @@
 			type: 'POST',
 			data: {
 				'commentID' : clickID,
-				'_csrfToken': '<?= $this->request->params['_csrfToken']?>'
+				'_csrfToken': '<?= $this->request->getParam('_csrfToken')?>'
 			},
 			success: function(data) {
 				$(comment).hide(1500);

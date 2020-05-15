@@ -2,3 +2,4 @@ config/app.php
 *.log
 .ftpconfig
 .vscode/sftp.json
+2dd.code-workspace

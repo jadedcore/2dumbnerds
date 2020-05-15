@@ -21,7 +21,7 @@
 			<itunes:name>2 Dumb Nerds</itunes:name>
 			<itunes:email>sup@2dumbnerds.com</itunes:email>
 		</itunes:owner>
-		<itunes:image href="http://2dumbnerds.com/img/dummies_3000x3000.png" />
+		<itunes:image href="http://2dumbnerds.com/img/2dn_chalk_1400.jpg" />
 		<itunes:category text="Games &amp; Hobbies">
 			<itunes:category text="Video Games"/>
 		</itunes:category>

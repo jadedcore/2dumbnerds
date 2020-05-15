@@ -34,6 +34,8 @@ class Application extends BaseApplication
 	 */
 	public function bootstrap()
 	{
+        $this->addPlugin('Mailgun');
+
 		// Call parent to load bootstrap from files.
 		parent::bootstrap();
 		if (PHP_SAPI === 'cli') {
@@ -53,7 +55,6 @@ class Application extends BaseApplication
 			$this->addPlugin(\DebugKit\Plugin::class);
 		}
 
-		$this->addPlugin('MailgunEmail');
 		$this->addPlugin('VanillaCake', ['bootstrap' => true, 'routes' => true, 'autoload' => true]);
 		$this->addPlugin('CodexEorzea', ['bootstrap' => true, 'routes' => true, 'autoload' => true]);
 	}

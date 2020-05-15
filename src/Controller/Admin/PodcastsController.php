@@ -32,6 +32,8 @@ class PodcastsController extends AppController {
 	}
 
 	public function upload() {
+		ini_set('max_execution_time', '120');
+
 		$this->autoRender = false;
 		$returnData = $this->request->getData();
 

@@ -70,7 +70,7 @@
 				</td>
 				<td class="account">
 					<?= $this->Form->create('User', ['url' => '/admin/users/delete']);?>
-						<?= $this->Form->input('id', ['type' => 'hidden', 'value' => $user->id]);?>
+						<?= $this->Form->control('id', ['type' => 'hidden', 'value' => $user->id]);?>
 						<?= $this->Form->button('<span class="glyphicon glyphicon-trash"></span>', [
 							'type' => 'submit',
 							'escape' => false,

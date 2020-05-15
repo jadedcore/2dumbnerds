@@ -13,7 +13,7 @@
 		"mailgun/mailgun-php": "^2.3",
 		"php-http/guzzle6-adapter": "^1.1",
 		"php-http/message": "^1.6",
-		"narendravaghela/cakephp-mailgun": "^1.0",
+		"narendravaghela/cakephp-mailgun": "4.*",
 		"erusev/parsedown": "^1.6"
 	},
 	"require-dev": {
