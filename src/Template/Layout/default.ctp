@@ -85,7 +85,7 @@ $cakeDescription = '2DumbNerds';
 						<a href="/streams">Streams</a>
 					</li>
 					<li>
-						<a href="/vanilla-cake/vanilla-categories">Forums</a>
+						<a href="https://discord.gg/nWwxhxf" target="_blank">Discord</a>
 					</li>
 					<li>
 						<a href="/pages/coming_soon">Reviews</a>
