@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Warning Messages
+printf "\n%s\n" "- Execute from your LOCAL Git Repository"
+printf "%s\n" "- Make sure you are on the correct branch"
+printf "%s\n\n" "- Overwrites directory on 2DN Server with current directory"
+
+# Get DEV Server Directory
+printf "%s\n" "2DN Server directory (no trailing '/'):"
+read -ep "/var/www/html/" directory
+if [ -z "$directory" ]; then
+	printf "%s\n\n" "Exiting ..."
+	exit
+fi
+
+# Get DEV Server Username
+printf "\n"
+read -ep "2DN Server Username: " devName
+if [ -z "$devName" ]; then
+	printf "%s\n\n" "Exiting ..."
+	exit
+fi
+
+# Move the files
+printf "\n%s\n" "Transferring Files ..."
+rsync -re ssh --delete --exclude-from .gitignore --exclude=".git*" --exclude="deploy*.script" \
+	* $devName@2dumbnerds.com:/var/www/html/$directory/
+
+# Make sure directory/file ownerships and permissions are good
+printf "\n%s\n" "Setting Ownerships and Permissions ..."
+ssh -t $devName@2dumbnerds.com "cd /var/www/html/$directory/; composer install; cd ..; sudo ./setSecurity.script $directory;"
+
+printf "\n"
