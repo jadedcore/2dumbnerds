@@ -1,3 +1,4 @@
+<?php $this->layout = 'lg_ad_layout';?>
 <?php $this->assign('title', 'Home');?>
 <div class="row">
 	<div class="col-xs-12">

@@ -57,6 +57,7 @@ class Application extends BaseApplication
 
 		$this->addPlugin('VanillaCake', ['bootstrap' => true, 'routes' => true, 'autoload' => true]);
 		$this->addPlugin('CodexEorzea', ['bootstrap' => true, 'routes' => true, 'autoload' => true]);
+		$this->addPlugin('Corners', ['bootstrap' => true, 'routes' => true, 'autoload' => true]);
 	}
 	/**
 	 * Setup the middleware queue your application will use.
