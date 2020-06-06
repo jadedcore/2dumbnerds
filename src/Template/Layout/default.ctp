@@ -100,6 +100,13 @@ $cakeDescription = '2DumbNerds';
 							<ul class="dropdown-menu">
 								<li><a href="/admin/users">Manage Users</a></li>
 								<li role="separator" class="divider"></li>
+								<li><a href="/admin/corners/corner-fighters">
+									Manage Fighters
+								</a></li>
+								<li><a href="/admin/corners/corner-events">
+									Manage Events
+								</a></li>
+								<li role="separator" class="divider"></li>
 								<li><a href="/admin/platforms/index">Manage Platforms</a></li>
 								<li><a href="/admin/companies/index">Manage Developers/Publishers</a></li>
 								<li><a href="/admin/games/index">Manage Games</a></li>
