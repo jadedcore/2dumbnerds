@@ -16,6 +16,8 @@ class CornerMatchesController extends AppController {
 	}
 
 	public function add() {
+		$this->request->allowMethod(['post']);
+		$this->autoRender = false;
 		$theMatch = $this->CornerMatches->newEntity();
 		if ($this->request->is(['post'])) {
 			$data = $this->request->getData();
@@ -25,10 +27,11 @@ class CornerMatchesController extends AppController {
 			if ($this->CornerMatches->save($theMatch)) {
 				$message = __('New match created.');
 				$this->Flash->success($message);
-				return $this->redirect($this->request->getRequestTarget());
+				return $this->redirect('/admin/corners/corner-events/view-card/' . $theMatch->corner_event_id);
 			} else {
 				$message = __('Unable to create match.  Fix dat shit.');
 				$this->Flash->error($message);
+				return $this->redirect('/admin/corners/corner-events/view-card/' . $theMatch->corner_event_id);
 			}
 
 		}

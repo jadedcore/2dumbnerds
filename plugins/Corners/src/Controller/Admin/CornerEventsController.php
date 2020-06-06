@@ -34,7 +34,7 @@ class CornerEventsController extends AppController {
 				'keyField' => 'id',
 				'valueField' => 'last_name'
 			]
-		);
+		)->toArray();
 
 		$this->set(compact('theEvent', 'fighters'));
 	}

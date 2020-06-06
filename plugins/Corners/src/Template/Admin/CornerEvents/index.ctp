@@ -1,6 +1,11 @@
 <div class="row">
 	<div class="col-xs-12">
-		<h1>Fighter List</h1>
+		<h1>
+			Event List
+			<a href="/admin/corners/corner-events/add" class="btn btn-primary btn-lg pull-right">
+				Create New Event
+			</a>
+		</h1>
 	</div>
 </div>
 
@@ -28,6 +33,3 @@
 		<?php endforeach;?>
 	</tbody>
 </table>
-
-
-<?php debug($events);?>
