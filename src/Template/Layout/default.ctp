@@ -130,10 +130,10 @@ $cakeDescription = '2DumbNerds';
 		</div>
 	</nav>
 	<div id="mobile-ad-banner" class="container-fluid">
-		<a href="http://wilsonspickles.com" target="_blank">
+		<a href="https://blacklivesmatter.com" target="_blank">
 			<div class="row">
 				<div class="col-xs-12">
-					<img src="/img/wilsons-small.png" style="height: 75px;" />
+					<img src="/img/BLM_logo.jpg" style="height: 75px;" />
 				</div>
 			</div>
 		</a>
