@@ -1,5 +1,6 @@
 <?php
 namespace Corners\Model\Table;
+use Cake\I18n\Time;
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
@@ -28,5 +29,17 @@ class CornerEventsTable extends Table {
 	 */
 	public function validationDefault(Validator $validator) {
 		return $validator;
+	}
+
+	/**
+	 * Checks to see if picks for the specified event can still be submitted.
+	 *
+	 * @param int $eventID - ID of the event to check
+	 */
+	public function arePicksOpen($eventID = null) {
+		$theEvent = $this->get($eventID);
+		$time = new Time();
+
+		return ($theEvent->event_time > $time ? true : false);
 	}
 }

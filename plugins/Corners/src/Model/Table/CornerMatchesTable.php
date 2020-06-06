@@ -25,6 +25,9 @@ class CornerMatchesTable extends Table {
 
 		$this->belongsTo('Fighter2', ['className' => 'Corners.CornerFighters'])
 			->setForeignKey('fighter2_id');
+
+		$this->hasMany('CornerPicks', ['className' => 'Corners.CornerPicks'])
+			->setForeignKey('corner_match_id');
 	}
 
 	/**

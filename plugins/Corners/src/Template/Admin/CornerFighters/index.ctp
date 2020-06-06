@@ -1,6 +1,11 @@
 <div class="row">
 	<div class="col-xs-12">
-		<h1>Fighter List</h1>
+		<h1>
+			Fighter List
+			<a href="/admin/corners/corner-fighters/add" class="btn btn-primary btn-lg pull-right">
+				Create New Fighter
+			</a>
+		</h1>
 	</div>
 </div>
 

@@ -19,25 +19,18 @@ class CornerMatchesController extends AppController {
 		$this->request->allowMethod(['post']);
 		$this->autoRender = false;
 		$theMatch = $this->CornerMatches->newEntity();
-		if ($this->request->is(['post'])) {
-			$data = $this->request->getData();
-			$theMatch = $this->CornerMatches->patchEntity($theMatch, $data);
-			$theMatch->created_by = $this->authUser['id'];
-			$theMatch->modified_by = $this->authUser['id'];
-			if ($this->CornerMatches->save($theMatch)) {
-				$message = __('New match created.');
-				$this->Flash->success($message);
-				return $this->redirect('/admin/corners/corner-events/view-card/' . $theMatch->corner_event_id);
-			} else {
-				$message = __('Unable to create match.  Fix dat shit.');
-				$this->Flash->error($message);
-				return $this->redirect('/admin/corners/corner-events/view-card/' . $theMatch->corner_event_id);
-			}
-
+		$data = $this->request->getData();
+		$theMatch = $this->CornerMatches->patchEntity($theMatch, $data);
+		$theMatch->created_by = $this->authUser['id'];
+		$theMatch->modified_by = $this->authUser['id'];
+		if ($this->CornerMatches->save($theMatch)) {
+			$message = __('New match created.');
+			$this->Flash->success($message);
+		} else {
+			$message = __('Unable to create match.  Fix dat shit.');
+			$this->Flash->error($message);
 		}
-		$fighters = $this->CornerMatches->Fighter1->find();
-
-		$this->set(compact('theMatch', 'fighters'));
+		return $this->redirect('/admin/corners/corner-events/view-card/' . $theMatch->corner_event_id);
 	}
 
 	public function modify($matchID = null) {
