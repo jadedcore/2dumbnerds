@@ -91,6 +91,9 @@ $cakeDescription = '2DumbNerds';
 						<a href="/pages/coming_soon">Reviews</a>
 					</li>
 					<li>
+						<a href="/pages/blm_links">BLM Links</a>
+					</li>
+					<li>
 						<a href="/pages/about">About</a>
 					</li>
 				</ul>
