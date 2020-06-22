@@ -85,11 +85,31 @@
 				</tr>
 				<tr>
 					<td>
+						Confessions of a Former Bastard Cop
+					</td>
+					<td>
+						<a href="https://medium.com/@OfcrACab/confessions-of-a-former-bastard-cop-bb14d17bc759" target="_blank">
+							https://medium.com/@OfcrACab
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						Justice For Big Floyd
 					</td>
 					<td>
 						<a href="https://www.justiceforbigfloyd.com/" target="_blank">
 							https://www.justiceforbigfloyd.com/
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Khan Academy - Black History Videos
+					</td>
+					<td>
+						<a href="https://www.khanacademy.org/about/blog/post/620017972448198656/learn-about-black-history-politics-and-culture" target="_blank">
+						https://www.khanacademy.org/
 						</a>
 					</td>
 				</tr>
