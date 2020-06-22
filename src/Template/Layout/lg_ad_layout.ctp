@@ -85,7 +85,7 @@ $cakeDescription = '2DumbNerds';
 						<a href="/streams">Streams</a>
 					</li>
 					<li>
-						<a href="/vanilla-cake/vanilla-categories">Forums</a>
+						<a href="https://discord.gg/nWwxhxf">Discord</a>
 					</li>
 					<li>
 						<a href="/pages/coming_soon">Reviews</a>
@@ -99,6 +99,13 @@ $cakeDescription = '2DumbNerds';
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="/admin/users">Manage Users</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="/admin/corners/corner-fighters">
+									Manage Fighters
+								</a></li>
+								<li><a href="/admin/corners/corner-events">
+									Manage Events
+								</a></li>
 								<li role="separator" class="divider"></li>
 								<li><a href="/admin/platforms/index">Manage Platforms</a></li>
 								<li><a href="/admin/companies/index">Manage Developers/Publishers</a></li>
@@ -130,19 +137,19 @@ $cakeDescription = '2DumbNerds';
 		</div>
 	</nav>
 	<div id="ad-banner" class="container-fluid hidden-xs">
-		<a href="http://wilsonspickles.com" target="_blank">
+		<a href="https://blacklivesmatter.com" target="_blank">
 			<div class="row">
 				<div class="col-xs-12">
-					<img src="/img/pickle-logo.png" style="height: 300px;" />
+					<img src="/img/BLM_logo.jpg" style="height: 300px;" />
 				</div>
 			</div>
 		</a>
 	</div>
 	<div id="mobile-ad-banner" class="container-fluid visible-xs">
-		<a href="http://wilsonspickles.com" target="_blank">
+		<a href="http://blacklivesmatter.com" target="_blank">
 			<div class="row">
 				<div class="col-xs-12">
-					<img src="/img/wilsons-small.png" style="height: 75px;" />
+					<img src="/img/BLM_logo.jpg" style="height: 75px;" />
 				</div>
 			</div>
 		</a>
