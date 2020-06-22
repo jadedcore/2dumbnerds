@@ -90,6 +90,9 @@ $cakeDescription = '2DumbNerds';
 					<li>
 						<a href="/pages/coming_soon">Reviews</a>
 					</li>
+					<li>
+						<a href="/pages/about">About</a>
+					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<?php if (isset($authUser['role']['name']) && $authUser['role']['name'] === 'admin'):?>
