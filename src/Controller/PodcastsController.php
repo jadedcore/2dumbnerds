@@ -6,7 +6,7 @@ use Cake\Event\Event;
 class PodcastsController extends AppController {
 	public function beforeFilter(Event $event) {
 		parent::beforeFilter($event);
-		$this->Auth->allow(['rss', 'index']);
+		$this->Auth->allow(['rss', 'index', 'listen']);
 	}
 
 	public function index() {
@@ -28,5 +28,15 @@ class PodcastsController extends AppController {
 		];
 		$podcasts = $this->Podcasts->find('all')->where($conditions);
 		$this->set('podcasts', $podcasts);
+	}
+
+	public function listen($episodeID = null) {
+		if (empty($episodeID)) {
+			$this->Flash->error(__('Please select a podcast to listen to.'));
+			return $this->redirect('/podcasts/index');
+		}
+
+		$thePodcast = $this->Podcasts->get($episodeID);
+		$this->set(compact('thePodcast'));
 	}
 }

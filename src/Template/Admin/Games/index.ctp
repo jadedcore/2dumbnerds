@@ -31,13 +31,25 @@
 					</a>
 				</td>
 				<td>
-					<?= $game['publisher']['name'];?>
+					<?php if (!empty($game['publisher_id'])):?>
+						<?= $game['publisher']['name'];?>
+					<?php else:?>
+						No Data
+					<?php endif;?>
 				</td>
 				<td>
-					<?= $game['developer']['name'];?>
+					<?php if (!empty($game['developer_id'])):?>
+						<?= $game['developer']['name'];?>
+					<?php else:?>
+						No Data
+					<?php endif;?>
 				</td>
 				<td>
-					<?= $game['release_date'];?>
+					<?php if (!empty($game['release_date'])):?>
+						<?= $game['release_date'];?>
+					<?php else:?>
+						No Data
+					<?php endif;?>
 				</td>
 				<td>
 					<?php if (!empty($game['rating']['image'])):?>
@@ -48,3 +60,5 @@
 		<?php endforeach;?>
 	</tbody>
 </table>
+
+<?php debug($game);?>

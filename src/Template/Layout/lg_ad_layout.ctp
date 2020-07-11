@@ -85,10 +85,16 @@ $cakeDescription = '2DumbNerds';
 						<a href="/streams">Streams</a>
 					</li>
 					<li>
-						<a href="/vanilla-cake/vanilla-categories">Forums</a>
+						<a href="https://discord.gg/nWwxhxf">Discord</a>
 					</li>
 					<li>
 						<a href="/pages/coming_soon">Reviews</a>
+					</li>
+					<li>
+						<a href="/pages/blm_links">BLM Links</a>
+					</li>
+					<li>
+						<a href="/pages/about">About</a>
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -99,6 +105,13 @@ $cakeDescription = '2DumbNerds';
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="/admin/users">Manage Users</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="/admin/corners/corner-fighters">
+									Manage Fighters
+								</a></li>
+								<li><a href="/admin/corners/corner-events">
+									Manage Events
+								</a></li>
 								<li role="separator" class="divider"></li>
 								<li><a href="/admin/platforms/index">Manage Platforms</a></li>
 								<li><a href="/admin/companies/index">Manage Developers/Publishers</a></li>
