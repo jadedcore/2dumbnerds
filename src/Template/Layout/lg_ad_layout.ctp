@@ -143,19 +143,19 @@ $cakeDescription = '2DumbNerds';
 		</div>
 	</nav>
 	<div id="ad-banner" class="container-fluid hidden-xs">
-		<a href="https://blacklivesmatter.com" target="_blank">
+		<a href="https://www.facebook.com/wilsonsoriginalpickles/?__xts__[0]=68.ARBeey6DgckqKVThDIj_J5TjViFdOBPv8HixdyB_EYc4hej9P3BKVF0kw938v55RU1MftrQlpgtvAaVQJN94bjSnJ9aeUhLRYPemsVUv0CE7mtpk04GjayqZWoBwrLcxRpKPD5-D8QNo7Fi6k4oUvYqWEWQ-e_QKKyGPLsfLX3UOekpt90ziXxoOebrfJdLkuIUiptRaIHx_DD7inknwdqPY5dYYOVzFqYI8ZIhT-9vpdJ7e6E6SGyOvYmF4MXSVernGDXh2LjieEoa4L4tlTJbVR9InW7FLKN-kRE0S7cu4cv24G-QQNe2AJ7ogXZtXuQaOfaLy3qGl6GaMSF2-fph25HXjPu8hoL6gOozg9bpPaNDPn54" target="_blank">
 			<div class="row">
 				<div class="col-xs-12">
-					<img src="/img/BLM_logo.jpg" style="height: 300px;" />
+					<img src="/img/pickle-logo.png" style="height: 300px;" />
 				</div>
 			</div>
 		</a>
 	</div>
 	<div id="mobile-ad-banner" class="container-fluid visible-xs">
-		<a href="http://blacklivesmatter.com" target="_blank">
+		<a href=https://www.facebook.com/wilsonsoriginalpickles/?__xts__[0]=68.ARBeey6DgckqKVThDIj_J5TjViFdOBPv8HixdyB_EYc4hej9P3BKVF0kw938v55RU1MftrQlpgtvAaVQJN94bjSnJ9aeUhLRYPemsVUv0CE7mtpk04GjayqZWoBwrLcxRpKPD5-D8QNo7Fi6k4oUvYqWEWQ-e_QKKyGPLsfLX3UOekpt90ziXxoOebrfJdLkuIUiptRaIHx_DD7inknwdqPY5dYYOVzFqYI8ZIhT-9vpdJ7e6E6SGyOvYmF4MXSVernGDXh2LjieEoa4L4tlTJbVR9InW7FLKN-kRE0S7cu4cv24G-QQNe2AJ7ogXZtXuQaOfaLy3qGl6GaMSF2-fph25HXjPu8hoL6gOozg9bpPaNDPn54 target="_blank">
 			<div class="row">
 				<div class="col-xs-12">
-					<img src="/img/BLM_logo.jpg" style="height: 75px;" />
+					<img src="/img/wilsons-small.png" style="height: 75px;" />
 				</div>
 			</div>
 		</a>

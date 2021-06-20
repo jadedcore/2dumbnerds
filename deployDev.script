@@ -24,10 +24,10 @@ fi
 # Move the files
 printf "\n%s\n" "Transferring Files ..."
 rsync -re ssh --delete --exclude-from .gitignore --exclude=".git*" --exclude="deploy*.script" \
-	* $devName@2dumbnerds.com:/var/www/html/$directory/
+	* $devName@theironhall.com:/var/www/html/$directory/
 
 # Make sure directory/file ownerships and permissions are good
 printf "\n%s\n" "Setting Ownerships and Permissions ..."
-ssh -t $devName@2dumbnerds.com "cd /var/www/html/$directory/; composer install; cd ..; sudo ./setSecurity.script $directory;"
+ssh -t $devName@theironhall.com "cd /var/www/html/$directory/; composer install; cd ..; sudo ./setSecurity.script $directory;"
 
 printf "\n"

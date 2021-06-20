@@ -10,7 +10,7 @@ class CornerFightersController extends AppController {
 	}
 
 	public function index() {
-		$contain = [];
+		$contain = ['CornerGenders'];
 		$fighters = $this->CornerFighters->find()->contain($contain)->toArray();
 		$this->set(compact('fighters'));
 	}
@@ -32,7 +32,8 @@ class CornerFightersController extends AppController {
 			}
 
 		}
-		$this->set(compact('theFighter'));
+		$cornerGenders = $this->CornerFighters->CornerGenders->find('list')->toArray();
+		$this->set(compact('theFighter', 'cornerGenders'));
 	}
 
 	public function modify($fighterID = null) {
@@ -57,6 +58,7 @@ class CornerFightersController extends AppController {
 				$this->Flash->error($message);
 			}
 		}
-		$this->set(compact('theFighter'));
+		$cornerGenders = $this->CornerFighters->CornerGenders->find('list')->toArray();
+		$this->set(compact('theFighter', 'cornerGenders'));
 	}
 }

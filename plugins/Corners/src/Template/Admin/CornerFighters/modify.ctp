@@ -39,7 +39,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group">
-						<?= $this->Form->control('Country', [
+						<?= $this->Form->control('corner_country_id', [
 							'class' => 'form-control',
 							'label' => false,
 							'empty' => '-- Choose a Country --'
@@ -98,6 +98,17 @@
 							'class' => 'form-control',
 							'label' => false,
 							'placeholder' => 'Age in Years'
+						]);?>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<?= $this->Form->control('corner_gender_id', [
+							'class' => 'form-control',
+							'label' => false,
+							'empty' => '-- Gender --'
 						]);?>
 					</div>
 				</div>

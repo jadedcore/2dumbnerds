@@ -92,7 +92,9 @@
 	<div class="col-md-6">
 		<h1>Register</h1>
 		<?= $this->Form->create('Users', ['name' => 'Register', 'url' => '/users/register']);?>
-			<legend><?= __('...or register for a new account.');?></legend>
+		<legend><?= __('Registration Temporarily Closed');?></legend>
+			<!-- <legend><?= __('...or register for a new account.');?></legend> -->
+			<fieldset disabled>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="form-group">
@@ -167,6 +169,7 @@
 					'disabled' => true
 				]);
 			?>
+			</fieldset>
 		<?= $this->Form->end();?>
 	</div>
 </div>

@@ -5,7 +5,7 @@ use Cake\ORM\RulesChecker;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
-class CornerFightersTable extends Table {
+class CornerGendersTable extends Table {
 	/**
 	 * Initialize method
 	 *
@@ -14,10 +14,9 @@ class CornerFightersTable extends Table {
 	 */
 	public function initialize(array $config) {
 		parent::initialize($config);
-		$this->setTable('corner_fighters');
-		$this->addBehavior('Timestamp');
+		$this->setTable('corner_genders');
 
-		$this->belongsTo('CornerGenders', ['className' => 'Corners.CornerGenders'])
+		$this->hasMany('CornerFighters', ['className' => 'Corners.CornerFighters'])
 			->setForeignKey('corner_gender_id');
 	}
 

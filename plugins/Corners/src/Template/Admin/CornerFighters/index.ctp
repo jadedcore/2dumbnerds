@@ -22,6 +22,7 @@
 			<th class="account">Reach</th>
 			<th class="account">Leg Reach</th>
 			<th class="stats">Age</th>
+			<th class="stats">Gender</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -35,12 +36,17 @@
 				<td><?= h($fighter->first_name);?></td>
 				<td class="account"><?= h($fighter->last_name);?></td>
 				<td class="account"><?= h($fighter->nickname);?></td>
-				<td class="account"><?= $fighter->country_id;?></td>
+				<td class="account"><?= $fighter->corner_country_id;?></td>
 				<td class="account"><?= $fighter->height_inches;?></td>
 				<td class="account"><?= $fighter->weight_lbs;?></td>
 				<td class="account"><?= $fighter->reach_inches;?></td>
 				<td class="account"><?= $fighter->leg_reach_inches;?></td>
 				<td class="account"><?= $fighter->age;?></td>
+				<td class="account">
+					<?php if (!empty($fighter->corner_gender)):?>
+						<?= $fighter->corner_gender->name;?>
+					<?php endif;?>
+				</td>
 			</tr>
 		<?php endforeach;?>
 	</tbody>

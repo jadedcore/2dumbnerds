@@ -216,6 +216,7 @@ class UsersController extends AppController {
  * @return void
  */
 
+ /*
 	public function register() {
 		if ($this->request->is('post')) {
 			$data = $this->request->getData();
@@ -277,6 +278,7 @@ class UsersController extends AppController {
 		}
 		$this->set(compact('theUser'));
 	}
+*/
 
 /**
  * Resend a verification e-mail if a user did not get the first one.
